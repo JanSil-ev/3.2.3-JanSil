@@ -1,0 +1,57 @@
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cardSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cardImage {
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.missionName {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #2c2c2c;
+  line-height: 1.3;
+}
+
+.rocketName {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.buttonContainer {
+  margin-top: auto;
+}

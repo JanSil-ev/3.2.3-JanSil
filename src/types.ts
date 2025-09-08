@@ -1,13 +1,22 @@
-export interface CardsItem {
-  id: number;
-  name: string;
-  price: number;
-  image: string;
-  category: string;
-  map?: any; // Уберите это свойство, если оно не используется
+export interface Launch {
+  flight_number: number;
+  mission_name: string;
+  details?: string | null;
+  rocket: {
+    rocket_name: string;
+  };
+  links: {
+    mission_patch_small?: string | null;
+    mission_patch?: string | null;
+  };
 }
 
-// Правильный интерфейс для элемента корзины
-export interface CartItem extends CardsItem {
-  count: number;
+export interface CatalogCardProps {
+  launch: Launch;
+  onOpenModal: () => void;
+}
+
+export interface CatalogModalProps {
+  launch: Launch;
+  onClose: () => void;
 }
